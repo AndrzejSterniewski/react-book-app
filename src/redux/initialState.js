@@ -1,0 +1,9 @@
+const initialState = {
+    books: [
+        { id: 1, title: 'of Mice and Men', author: 'John Steinbeck' },
+        { id: 2, title: 'the Witcher', author: 'Andrzej Sapkowski' },
+        { id: 3, title: 'Hobbit', author: 'J.R.R. Tolkien' }
+    ]
+};
+
+export default initialState;
