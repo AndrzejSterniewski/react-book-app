@@ -14,6 +14,12 @@ export const removeBook = payload => ({ type: REMOVE_BOOK, payload });
 export const addBook = payload => ({ type: ADD_BOOK, payload });
 export const updateBooks = payload => ({ type: UPDATE_BOOKS, payload });
 
+export const fetchBooks = dispatch => {
+    fetch('http://localhost:3131/api/books')
+        .then(res => res.json())
+        .then(books => dispatch(updateBooks(books)));
+};
+
 const reducer = (statePart = [], action) => {
     switch (action.type) {
         case REMOVE_BOOK:
